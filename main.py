@@ -18,4 +18,5 @@ async def get_posts():
 async def add_post(new_post: Post):
     if not new_post.is_published:
         return {"title": new_post.title, "content": new_post.content}
+
     return {"message": "Post already published"}
